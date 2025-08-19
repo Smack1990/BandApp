@@ -1,0 +1,19 @@
+﻿@using BandApp.Web.Models
+@model Band[]
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Världens bästa band</title>
+</head>
+<body>
+    <h1>Världens bästa band</h1>
+    <ul>
+        @foreach (var band in Model)
+        {
+            <li>@band.Name</li>
+        }
+    </ul>
+
+
+</body>
+</html>

@@ -14,4 +14,15 @@ public class BandsController : Controller
         Band[] model = bandService.GetBands();
         return View(model);
     }
+    [Route("bands/{id}")]
+    public IActionResult Details(int id)
+    {
+        Band model = bandService.GetBandById(id);
+        if (model == null)
+        {
+            return NotFound();
+        }
+        return View(model);
+    }
+
 }
