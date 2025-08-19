@@ -11,4 +11,10 @@ public class BandService
         new Band {Id = 5, Name = "Jonas brothers", Description = "An american pop band from jersey"},
 
         ];
+
+    public Band GetBandById(int Id) => products.FirstOrDefault(x => x.Id == Id);
+
+    public Band[] GetBands() => products
+        .OrderByDescending(x => x.Name)
+        .ToArray();
 }
