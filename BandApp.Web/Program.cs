@@ -10,9 +10,7 @@ namespace BandApp.Web
             app.MapGet("/", () => "Hello World!");
 
             app.Run();
-            //Markus
-            //Jonas
-            //Saga
+           
         }
     }
 }
