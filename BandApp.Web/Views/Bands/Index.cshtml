@@ -3,6 +3,7 @@
 <!DOCTYPE html>
     <html>
     <head>
+        <link rel="stylesheet" href="https://unpkg.com/@@picocss/pico@@latest/css/pico.classless.min.css">
         <title>Världens bästa band</title>
     </head>
     <body>
@@ -10,7 +11,7 @@
         <ul>
             @foreach (var band in Model)
             {
-                <li>@band.Name</li>
+            <li><a href="@Url.Action("Details", "Bands", new {id = band.Id})">@band.Name</a></li>
             }
         </ul>
         

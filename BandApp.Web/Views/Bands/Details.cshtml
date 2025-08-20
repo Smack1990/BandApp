@@ -1,19 +1,17 @@
 ﻿@using BandApp.Web.Models
-@model Band[]
+@model BandApp.Web.Models.Band
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="https://unpkg.com/@@picocss/pico@@latest/css/pico.classless.min.css">
     <title>Världens bästa band</title>
 </head>
 <body>
-    <h1>Världens bästa band</h1>
+    <h1>@Model.Name</h1>
     <ul>
-        @foreach (var band in Model)
-        {
-            <li>@band.Name</li>
-        }
+        @Model.Description
     </ul>
-
+<img src="@Url.Content(Model.Picture)" alt="IMAGES" />
 
 </body>
 </html>
