@@ -12,6 +12,13 @@
         @Model.Description
     </ul>
 <img src="@Url.Content(Model.Picture)" alt="IMAGES" />
-
+<br>
+    <iframe width="560" height="315" src="@Model.Video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<br>
+<h4>Album</h4>
+@foreach (var item in Model.Album)
+    {
+        <ul>@item</ul>
+    }
 </body>
 </html>
